@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<style>
+.mySlides {
+    background-repeat:repeat;
+    position:fixed;
+    padding:0;
+    margin:0;
+    top:0;
+    left:0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+.myTitles {
+    vertical-align: middle;
+    height: 100%;
+    width: 100%;
+}
+vertical{
+    width: 100%;
+    border-radius: 1em;
+    padding: 1em;
+    position: absolute;
+    top: 49%;
+    left: 49%;
+    margin-right: -49%;
+    transform: translate(-49%, -49%) 
+}
+</style>
+
+
+<head>
+<title>C L E A R I N G</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- for Google -->
+<meta name="description" content="C L E A R I N G" />
+<meta name="author" content="Joseph Volmer" />
+<meta name="copyright" content="Sleep On Dreams" />
+
+<!-- for Facebook -->          
+<meta property="og:title" content="C L E A R I N G" />
+<meta property="og:type" content="article" />
+<meta property="og:image" content="rsc/lights.jpg" />
+<meta property="og:url" content="http://cccllleeeaaarrriiinnnggg.com" />
+<meta property="og:description" content="C L E A R I N G" />
+
+<!-- for Twitter -->          
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="C L E A R I N G" />
+<meta name="twitter:description" content="C L E A R I N G" />
+<meta name="twitter:image" content="rsc/lights.jpg" />
+</head>
+
+<audio autoplay="autoplay" loop="loop">  
+<source src="rsc/lights.mp3" />  
+</audio> 
+
+<body>
+
+<div style="width:100%">
+  <img class="mySlides" src="rsc/bg1.jpg">
+  <img class="mySlides" src="rsc/bg2.jpg">
+  <img class="mySlides" src="rsc/bg3.jpg">
+  <img class="mySlides" src="rsc/bg4.jpg">
+  <img class="mySlides" src="rsc/bg5.jpg">
+</div>
+
+<vertical>
+<a href="http://clearing.bandcamp.com/album/lights" target="blank"><img class= "myTitles" src="rsc/clearing.png"></a>
+<a href="http://clearing.bandcamp.com/album/lights" target="blank"><img class= "myTitles" src="rsc/lights.png"></a>
+</vertical>
+
+<script>
+var myIndex = 0;
+var myIndexB = 0;
+bgSlides();
+titleSlides();
+function bgSlides() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}
+    x[myIndex-1].style.display = "block";
+    setTimeout(bgSlides, 2000); // Change image every 2 seconds
+}
+function titleSlides() {
+    var j;
+    var y = document.getElementsByClassName("myTitles");
+    for (j = 0; j < y.length; j++) {
+       y[j].style.display = "none";
+    }
+    myIndexB++;
+    if (myIndexB > y.length) {myIndexB = 1}
+    y[myIndexB-1].style.display = "block";
+    setTimeout(titleSlides, 2000); // Change image every 2 seconds
+}
+</script>
+
+</body>
+</html>
